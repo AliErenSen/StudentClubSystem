@@ -24,6 +24,9 @@ namespace StudentClubSystem.Controllers
         [HttpPost]
         public IActionResult Register(User user)
         {
+            // bu sayfa giris islemlerinin yapıldığı yer
+
+
             // Rol ve İlişkili veriler formdan gelmez, validasyondan çıkaralım
             ModelState.Remove("Rol");
             ModelState.Remove("EventRegistrations");
@@ -98,6 +101,6 @@ namespace StudentClubSystem.Controllers
             var user = _userRepository.Get(u => u.Id == userId, includeProperties: "EventRegistrations.Event");
             return View(user);
         }
-
+        
     }
 }

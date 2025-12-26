@@ -16,7 +16,7 @@ namespace StudentClubSystem.Controllers
 
         public IActionResult Index()
         {
-            // Tüm kulüpleri getir
+            // Tüm kulüpleri getir ÖGRENCİ EKLEME VERİ SİLME LİSTELEME BURASI
             var clubs = _clubRepository.GetAll();
             return View(clubs);
         }
